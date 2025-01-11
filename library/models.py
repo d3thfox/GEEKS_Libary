@@ -1,4 +1,6 @@
 from django.db import models
+from django.db.models import ForeignKey
+
 
 class Books(models.Model):
     GENRE_CHOICES = (
@@ -24,6 +26,32 @@ class Books(models.Model):
 
     def __str__(self):
         return f'{self.book_title}'
+
+class Reviews(models.Model):
+    CHOICES_STAR = (
+        ('⭐', '⭐'),
+        ('⭐⭐', '⭐⭐'),
+        ('⭐⭐⭐', '⭐⭐⭐'),
+        ('⭐⭐⭐⭐', '⭐⭐⭐⭐'),
+        ('⭐⭐⭐⭐⭐', '⭐⭐⭐⭐⭐')
+    )
+    review_choice = models.ForeignKey(Books,on_delete=models.CASCADE,
+                                      related_name='books')
+    created_at = models.DateTimeField(auto_now_add=True)
+    comment = models.TextField(verbose_name='Напишите как вам книга')
+    stars = models.CharField(max_length=100,choices=CHOICES_STAR,default='⭐⭐⭐⭐⭐')
+
+    class Meta:
+        verbose_name = 'комментарий'
+        verbose_name_plural ='комментарии'
+
+    def __str__(self):
+        return f'{self.review_choice.book_title} - {self.comment}'
+
+
+
+
+
 
 
 
