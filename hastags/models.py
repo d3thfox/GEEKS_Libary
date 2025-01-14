@@ -15,6 +15,11 @@ class Book(models.Model):
     book = models.ForeignKey(Books, on_delete=models.CASCADE)
     tags = models.ManyToManyField(Tag)
 
+    class Meta:
+         verbose_name = "книга"
+         verbose_name_plural = "книги"
+
+
 
 
 

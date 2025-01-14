@@ -23,7 +23,7 @@ def fairy_tale_books(request):
 
 def drama_books(request):
     if request.method == "GET":
-        drama = models.Books.objects.filter(tags__name = 'Драма')
+        drama = models.Book.objects.filter(tags__name = 'Драмма')
         context = {'drama': drama}
         return render(request,template_name='hastags/drama_books.html',context=context)
 
