@@ -1,0 +1,16 @@
+{% load static %}
+{% include 'components/header.html' %}
+<link rel="stylesheet" href="{% static 'css/hastags.css' %}">
+
+<br><br><br><br>
+<div class="book-list">
+    {% for i in fantasy %}
+        <div class="card">
+            <img src="{{ i.book.picture.url }}" alt="Изображение товара">
+            <h3>{{ i.book.book_title }}</h3>
+            <p>{{ i.book.price }}</p>
+        </div>
+    {% endfor %}
+</div>
+
+{% include 'components/footer.html' %}

@@ -1,0 +1,62 @@
+/* Стили для карточек книг */
+.card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 250px;
+    padding: 16px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    margin: 10px;
+    transition: transform 0.3s ease; /* Анимация при наведении */
+}
+
+.card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.card h3 {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.card p {
+    font-size: 1em;
+    color: #333;
+}
+
+/* Стили для кнопок фильтрации */
+.buttons {
+    text-align: center; /* Центрируем кнопки */
+    margin: 20px 0;
+}
+
+.buttons .button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #2d87f0;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.buttons .button:hover {
+    background-color: #1e6bb8;
+}
+
+/* Дополнительные стили для списка книг */
+.book-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Эффект при наведении на карточку */
+.card:hover {
+    transform: scale(1.05);
+}

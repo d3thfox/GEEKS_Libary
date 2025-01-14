@@ -1,0 +1,22 @@
+{% load static %}
+{% include 'components/header.html' %}
+<link rel="stylesheet" href="{% static 'css/hastags.css' %}">
+
+<br><br><br>
+<div class="buttons">
+    <a href="{% url 'drama' %}" class="button">Драма</a>
+    <a href="{% url 'fairy_tale' %}" class="button">Сказки</a>
+    <a href="{% url 'fantasy' %}" class="button">Фэнтези</a>
+</div>
+
+<div class="book-list">
+    {% for i in books %}
+        <div class="card">
+            <img src="{{ i.book.picture.url }}" alt="Изображение товара">
+            <h3>{{ i.book.book_title }}</h3>
+            <p>{{ i.book.price }}</p>
+        </div>
+    {% endfor %}
+</div>
+
+{% include 'components/footer.html' %}

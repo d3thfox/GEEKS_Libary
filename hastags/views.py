@@ -2,6 +2,13 @@ from django.shortcuts import render
 
 from . import models
 
+def all_book_view(request):
+    if request.method == 'GET':
+        books = models.Book.objects.all()
+        context = {'books':books}
+        return render(request,template_name='hastags/all_books.html',context=context)
+
+
 def fantasy_books(request):
     if request.method == "GET":
         fantasy = models.Book.objects.filter(tags__name='Фантастика')

@@ -1,0 +1,21 @@
+{% load static %}
+{% include 'components/header.html' %}
+<link rel="stylesheet" href="{% static 'css/show.css' %}">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Order_detail</title>
+</head>
+<body>
+<h1>Название : {{ order_id.choice_book.book_title }}</h1>
+<p>Цена : {{ order_id.choice_book.price }}</p>
+<p>Жанр : {{ order_id.choice_book.genre_choice }}</p>
+<p>Автор : {{ order_id.choice_book.author }}</p>
+<p>Когда выложенна на сайт : {{ order_id.choice_book.created_at}}</p>
+
+
+</body>
+
+</html>
+{% include 'components/footer.html' %}

@@ -1,0 +1,30 @@
+{% load static %}
+{% include 'components/header.html' %}
+<link rel="stylesheet" href="{% static 'css/show.css' %}">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Todo_list</title>
+</head>
+<body>
+<ul>
+    {% for i in order_list %}
+    <li>
+        <h1>
+           Название : {{ i.choice_book.book_title }}
+        </h1>
+        <p>
+          Цена :  {{ i.choice_book.price }}
+        </p>
+        <button><a href="/order_list/{{ i.id }}/">Подробнее</a></button>
+        <button><a href="/order_list/{{ i.id }}/delete/">Удалить</a></button>
+    </li>
+
+    {% endfor %}
+</ul>
+
+</body>
+
+</html>
+{% include 'components/footer.html' %}

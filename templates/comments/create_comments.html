@@ -1,0 +1,21 @@
+{% load static %}
+{% include 'components/header.html' %}
+<link rel="stylesheet" href="{% static 'css/show.css' %}">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>create_comments</title>
+</head>
+<body>
+<form action="/create_comment/" method="POST">
+    <br><br>   
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Комментировать</button>
+</form>
+
+</body>
+
+</html>
+{% include 'components/footer.html' %}

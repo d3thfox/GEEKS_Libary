@@ -1,0 +1,22 @@
+{% load static %}
+{% include 'components/header.html' %}
+<link rel="stylesheet" href="{% static 'css/order.css' %}">
+<link rel="stylesheet" href="{% static 'css/show.css' %}">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>create_order</title>
+</head>
+<body>
+<form action="/create_order/" method="POST">
+    <br><br>   
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Купить</button>
+</form>
+
+</body>
+
+</html>
+{% include 'components/footer.html' %}

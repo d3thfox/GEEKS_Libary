@@ -25,7 +25,7 @@ class Books(models.Model):
         verbose_name_plural = 'книги'
 
     def __str__(self):
-        return f'{self.book_title}'
+        return f'{self.book_title} - {self.price} сом'
 
 class Reviews(models.Model):
     CHOICES_STAR = (
@@ -47,6 +47,8 @@ class Reviews(models.Model):
 
     def __str__(self):
         return f'{self.review_choice.book_title} - {self.comment}'
+    
+
 
 
 
