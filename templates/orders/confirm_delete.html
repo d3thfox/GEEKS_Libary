@@ -1,0 +1,21 @@
+{% load static %}
+{% include 'components/header.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Todo_dekete</title>
+</head>
+<body>
+    <br><br><br>
+<form method="post">
+    <h1>Вы уверенны что хотите удалить</h1>
+    {% csrf_token %}
+    <button type="submit">Да</button>
+
+</form>
+
+</body>
+
+</html>
+{% include 'components/footer.html' %}
