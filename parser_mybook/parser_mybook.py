@@ -26,7 +26,7 @@ def get_data(html):
             'href': href,
             'description': description
         })
-    return loveread_list
+    return mybook_list
 
 def parsing():
     response = get_html(URL)
