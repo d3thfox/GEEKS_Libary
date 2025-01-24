@@ -28,7 +28,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'library',
     'hastags',
-    'orders'
+    'orders',
+    'parser_mybook',
+    
 ]
 
 MIDDLEWARE = [

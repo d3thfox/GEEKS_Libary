@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+Книги спарсены
+{% for i in my_book %}
+
+    <h1>Название : {{ i.title }}</h1>
+    <p>Описание : {{ i.description }}</p>
+    <a href="{{ i.href }}">Перейти к к книге </a>
+
+{% endfor %}
+</body>
+</html>

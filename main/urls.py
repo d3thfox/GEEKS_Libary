@@ -11,6 +11,7 @@ urlpatterns = [
     path('', include('library.urls')),
     path('', include('hastags.urls')),
     path('', include('orders.urls')),
+    path('', include('parser_mybook.urls')),
 ]
 
 urlpatterns += static(settings.MEDIA_URL,
