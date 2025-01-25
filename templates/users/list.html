@@ -1,0 +1,26 @@
+
+{% load static %}
+{% include 'components/header.html' %}
+
+<ul>
+    {% for item in person %}
+        <li>
+            <strong>{{ item.username }}</strong><br>
+            Опыт работы: {{ item.experience }} лет<br>
+            Пол: {{ item.get_gender_display }}<br>
+            {% if item.club %}
+                <p>ЗП: {{ item.club }}</p>
+            {% else %}
+                <p>ЗП: не указано</p>
+            {% endif %}
+        </li>
+    {% empty %}
+        <li>Нет пользователей</li>
+    {% endfor %}
+</ul>
+
+<form action="{% url 'users:login' %}" method="POST">
+    {% csrf_token %}
+    <button type="submit">Выйти</button>
+</form>
+{% include 'components/footer.html' %}

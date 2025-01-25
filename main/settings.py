@@ -30,6 +30,10 @@ INSTALLED_APPS = [
     'hastags',
     'orders',
     'parser_mybook',
+    'users',
+    
+    
+    
     
 ]
 
@@ -41,6 +45,10 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'users.middleware.ExperienceClubMiddleware',
+   
+    
+
 ]
 
 ROOT_URLCONF = 'main.urls'

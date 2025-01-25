@@ -44,13 +44,14 @@
                     </ul>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link enable" href="#" style="color: yellow;">Регистрация</a>
+                    <a class="nav-link enable" href="{% url 'users:register' %}" style="color: yellow;">Регистрация</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link enable" href="{% url 'mybook_list' %}" style="color: yellow;">Другие книги</a>
                     <a class="nav-link enable" href="{% url 'mybook_form' %}" style="color: yellow;">Парсинг</a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link enable" href="{% url 'users:login' %}" style="color: yellow;">Войти</a>
                     <a class="nav-link enable" href="#" style="color: yellow;">Итоговая Контрольная работа</a>
                 </li>
             </ul>

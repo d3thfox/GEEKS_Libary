@@ -1,8 +1,10 @@
 {% load static %}
 {% include 'components/header.html' %}
-<form method="post">
+
+<h2>Авторизация</h2>
+<form method="POST" enctype="multipart/form-data">
     {% csrf_token %}
     {{ form.as_p }}
-    <button type="submit">Submit</button>
+    <button type="submit">Войти</button>
 </form>
 {% include 'components/footer.html' %}
