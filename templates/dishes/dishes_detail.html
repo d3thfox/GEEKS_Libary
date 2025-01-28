@@ -1,0 +1,27 @@
+{% load static %}
+{% include 'components/header.html' %}
+<link rel="stylesheet" href="{% static 'css/show.css' %}">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+=
+<ul>
+    <br><br>
+    {% for i in ingredients %}
+    <li>
+        <h1>Ингридиент : {{ i.name }}</h1>
+        <p>Количество : {{ i.quantity }}</p>
+        <p>Единица измерения : {{ i.unit }}</p>
+
+    </li>
+
+    {% endfor %}
+</ul>
+
+</body>
+
+</html>
+{% include 'components/footer.html' %}

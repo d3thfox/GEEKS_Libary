@@ -34,6 +34,7 @@ INSTALLED_APPS = [
     'orders',
     'parser_mybook',
     'users',
+    'dishes'
     
     
     

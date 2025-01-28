@@ -1,0 +1,33 @@
+{% load static %}
+{% include 'components/header.html' %}
+<br><br><br><br><br>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dishes_List</title>
+</head>
+<body>
+<ul>
+    {% for i in dishes %}
+    <li>
+        <h1>
+           Название : {{ i.title }}
+        </h1>
+        <p>
+          Описание :  {{ i.description }}
+        </p>
+        <button><a href="/dishes_list/{{ i.id }}/">Подробнее</a></button>
+        <button><a href="/dishes_list/{{ i.id }}/delete/">Удалить</a></button>
+    </li>
+
+    {% endfor %}
+</ul>
+<button><a href="/create_ingredient/">Добавить Ингридиент</a></button>
+<button><a href="/create_recipe/">Добавить рецепт</a></button>
+
+
+
+</body>
+
+</html>

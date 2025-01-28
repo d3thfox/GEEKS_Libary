@@ -1,0 +1,9 @@
+{% load static %}
+{% include 'components/header.html' %}
+<br><br><br><br><br>
+<form action="/create_recipe/" method="POST">
+    <br><br>   
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Оставить</button>
+</form>

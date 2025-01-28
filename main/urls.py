@@ -13,6 +13,7 @@ urlpatterns = [
     path('', include('orders.urls')),
     path('', include('parser_mybook.urls')),
     path('', include('users.urls')),
+    path('', include('dishes.urls')),
   
     
 ]
